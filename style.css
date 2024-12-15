@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  height: 100vh;
+  width: 100vw; /* Исправлено для корректной ширины */
+  overflow: hidden;
+  background-color: rgb(142, 126, 195);
+  display: flex;
+  flex-direction: column; /* Центрируем все вертикально */
+  justify-content: space-between; /* Распределяем элементы по вертикали */
+}
+
+header,
+footer {
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: aliceblue;
+  position: fixed;
+  width: 100%;
+}
+
+header {
+  top: 0;
+  box-shadow: 0 4px 6px black;
+}
+
+footer {
+  bottom: 0;
+  box-shadow: 0 -4px 6px black;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  font-size: 1em;
+}
+
+#btn-start {
+  cursor: pointer;
+  font-size: 3rem;
+  border: none;
+  box-shadow: 2px 4px 3px black;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btn-start:hover {
+  background-color: brown;
+  color: chartreuse;
+}
+
+#btn-start::after,
+#btn-start::before {
+  content: "";
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  background: linear-gradient(90deg, #f317f3, rgb(33, 12, 72));
+  border-radius: 50%;
+  animation: obracanko linear infinite 5s;
+}
+
+@keyframes obracanko {
+  0% {
+    transform: rotate(0deg);
+    scale: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    scale: 2;
+  }
+  100% {
+    transform: rotate(380deg);
+    scale: 3;
+  }
+}
+
+#mainpytania {
+  display: none;
+  flex-grow: 1; /* Занимает оставшееся пространство */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#pytania {
+  margin: 20px;
+}
+
+button {
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+button.hidden {
+  display: none;
+}
+
+#wyniki {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  display: none;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

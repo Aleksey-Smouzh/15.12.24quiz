@@ -4,32 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Putania</title>
+    <title>Quiz</title>
+    <style>
+        #mainpytania {
+            display: none;
+        }
+        #wyniki {
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>Ankety i pytania</h1>
+        <h1>Quiz</h1>
     </header>
 
-    <button onclick="start()" id="btn-start"> start</button>
+    <!-- Start Button -->
+    <button id="btn-start">Start</button>
 
-<main id="mainpytania">
-    <div class="" id="czasomierz"></div>
-    <div class="" id="pytania">
+    <!-- Main Quiz Area -->
+    <main id="mainpytania">
+        <div id="czasomierz">Czas: 03:00</div> <!-- Timer -->
+        <div id="pytania"></div>
+        <button id="btn-next" class="hidden">Next</button>
+        <button id="btn-confirm" class="hidden">Confirm</button>
+    </main>
 
-    </div>
+    <!-- Result Area -->
+    <div id="wyniki" class="hidden"></div>
 
+    <footer>
+        <p>Wykonał: XYZ</p>
+    </footer>
 
-<button onclick="nastempnePytanie()">nastempne</button>
-<button onclick="zatwierdzonyWybur()">zatwierd</button>
-
-</main>
-
-
-<footer>
-    <p>wykonal:<span>XZY</span></p>
-</footer>
-<script src="pytania.js?v=<?php echo time(); ?"></script>
-<script src="funkcij.js?v=<?php echo time(); ?"></script>
+    <script src="funkcij.js"></script>
 </body>
 </html>
+
+
